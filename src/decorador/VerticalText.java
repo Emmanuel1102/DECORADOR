@@ -18,11 +18,9 @@ public class VerticalText extends Decorador {
     }
 
   @Override
-    public String getTexto() {
-       
-        
-       texto= texto.replaceAll(" ", "\n");        
-        return texto +"\n";
+    public String getTexto() { 
+     texto= texto.replaceAll(" ", "\n");       
+     return texto +"\n";
     }
 
     @Override

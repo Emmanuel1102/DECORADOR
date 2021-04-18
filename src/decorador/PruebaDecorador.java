@@ -32,25 +32,22 @@ public class PruebaDecorador {
         System.out.print(ta.getTexto()+"\n");
         System.out.print(tb.getTexto()+"\n");
         System.out.print(tc.getTexto()+"\n");
-//        Texto tb = new Alinea(ta, 'C');
-//        System.out.println(tb.getTexto());
+
         
-      System.out.print("####################################TEST VERTICAL############################################################ \n");
-         
+     System.out.print("####################################TEST VERTICAL############################################################ \n");
         VerticalText vertical = new VerticalText(new Alinear(new TextoC("PROBANDO LOS TRES TIPOS DE ALINEACIONES")));
-        System.out.print(vertical.getTexto());
+     System.out.print(vertical.getTexto());
         
-      System.out.print("####################################TEST JUSTIFICADO######################################################### \n");
+    System.out.print("####################################TEST JUSTIFICADO######################################################### \n");
 
         JustificarText jt = new JustificarText(new Alinear(new TextoC("Estoy harto de la tierra, de las personas, estoy harto de sentirme atrapado en la maraña que conforman de sus vidas. Dicen que trabajan para crear un paraíso, pero su paraíso está plagado de horrores. Quizá el mundo no se crea, quizá nada se crea, como un reloj sin relojero. Es demasiado tarde, siempre ha sido y siempre será… demasiado tarde.")));
-        System.out.println(jt.getTexto());
-      
-       System.out.print("####################################TEXTO VERTICAL IZQUIERDA################################################# \n");
+        System.out.println(jt.getTexto());      
+      System.out.print("####################################TEXTO VERTICAL IZQUIERDA################################################# \n");
        
        Texto left = new Alinea(new TextoC(vertical.getTexto()),'l');
        System.out.println(left.getTexto()); 
         
-       System.out.print("####################################TEXTO VERTICAL DERECHA################################################### \n");
+      System.out.print("####################################TEXTO VERTICAL DERECHA################################################### \n");
 
        Texto right = new Alinea(new TextoC(vertical.getTexto()),'r');
        System.out.println(right.getTexto());

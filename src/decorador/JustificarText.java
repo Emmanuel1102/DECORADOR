@@ -20,14 +20,14 @@ public class JustificarText extends Decorador {
     public String getTexto() {
         
         int tamañoRenglon = 100;
-        String t = new String();
-        int contador = 0;
+        String t = "";
+        int c= 0;
         for (int i = 0; i < texto.length(); i++) {
             t += texto.charAt(i);
-            contador++;
-            if (contador == tamañoRenglon) {
+            c++;
+            if (c == tamañoRenglon) {
                 t += "\n";
-                contador = 0;
+                c = 0;
             }
         }
         return t;
