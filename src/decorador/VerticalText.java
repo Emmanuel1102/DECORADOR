@@ -17,10 +17,12 @@ public class VerticalText extends Decorador {
         texto = super.getTexto();
     }
 
-    @Override
-    public String getTexto() {     
-     texto= texto.replaceAll("(?=\\s)", "\n");        
-     return texto;  
+  @Override
+    public String getTexto() {
+       
+        
+       texto= texto.replaceAll(" ", "\n");        
+        return texto +"\n";
     }
 
     @Override

@@ -23,7 +23,7 @@ public class Alinear extends Decorador{
     
     @Override
     public String getTexto() {
-        int tamañoRenglon=80;
+        int tamañoRenglon=95;
         int numeroEspacios=0;
         String t="";
         if(alinear == 'C' || alinear == 'c'){

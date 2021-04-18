@@ -19,17 +19,60 @@ public class Alinea extends Decorador {
 
     @Override
     public String getTexto() {
-        int tamañoRenglon = 80;
+        int tamañoRenglon = 95;
         int numeroEspacios = 0;
         String t = "";
-        if (alinear == 'C' || alinear == 'c') {
-            numeroEspacios = (tamañoRenglon - texto.length()) / 2;
-            for (int p = 0; p < numeroEspacios; p++) {
-                //t.concat(" ");
-                t += " ";
+        String[] split = texto.split("\n");
+
+        switch (alinear) {
+            case 'C':
+            case 'c':
+                
+                //OPCION 2    t = String.format("%50s", texto);
+
+            for (String a : split) {
+                numeroEspacios = (tamañoRenglon - a.length()) / 2;
+                for (int p = 0; p < numeroEspacios; p++) {
+                    t += " ";
+                }
+                if (split.length == 1) {
+                    t = t + a;
+                } else {
+                    t = t + a + "\n";
+                }
             }
+
+             break;
+                
+            case 'L':
+            case 'l':
+                t = String.format("%1s", texto);
+                break;
+                
+            case 'R':
+            case 'r':
+              
+              for (String a : split) {
+             
+                numeroEspacios = tamañoRenglon - a.length();
+                for (int p = 0; p < numeroEspacios; p++) {
+                    t += " ";
+                }
+                if (split.length == 1) {
+                    t = t + a;
+                } else {
+                    t = t + a + "\n";
+                }
+            }
+                
+                
+                
+
+                break;
+            default:
+                break;
         }
-        return t + texto;
+        return t ;
     }
 
     @Override
