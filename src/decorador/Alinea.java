@@ -30,16 +30,12 @@ public class Alinea extends Decorador {
                 
                 //OPCION 2    t = String.format("%50s", texto);
 
-            for (String a : split) {
-                numeroEspacios = (tamañoRenglon - a.length()) / 2;
+            for (String tex : split) {
+                numeroEspacios = (tamañoRenglon - tex.length()) / 2;
                 for (int p = 0; p < numeroEspacios; p++) {
-                    t += " ";
+                    t += " "; 
                 }
-                if (split.length == 1) {
-                    t = t + a;
-                } else {
-                    t = t + a + "\n";
-                }
+                 t = t + tex + "\n";
             }
 
              break;
@@ -51,19 +47,18 @@ public class Alinea extends Decorador {
                 
             case 'R':
             case 'r':
-              
-              for (String a : split) {
-             
-                numeroEspacios = tamañoRenglon - a.length();
+                              //OPCION 2   t = String.format("%100s", texto);
+
+              for (String tex: split) {
+                numeroEspacios = tamañoRenglon - tex.length();
                 for (int p = 0; p < numeroEspacios; p++) {
-                    t += " ";
+                    t += " "; 
                 }
-                if (split.length == 1) {
-                    t = t + a;
-                } else {
-                    t = t + a + "\n";
+                t = t + tex + "\n";
+
                 }
-            }
+                 
+            
                 
                 
                 

@@ -19,7 +19,7 @@ public class JustificarText extends Decorador {
     @Override
     public String getTexto() {
         
-        int tamañoRenglon = 95;
+        int tamañoRenglon = 100;
         String t = new String();
         int contador = 0;
         for (int i = 0; i < texto.length(); i++) {
